@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
     <title>Gymnastics World</title>
 </head>
 <body>
@@ -25,47 +26,126 @@
     <section id="about">
         <h2>About Gymnastics World</h2>
         <p>Welcome to Gymnastics World, where passion meets perfection. Learn about the history and artistry of gymnastics.</p>
-        <!-- Add more content as needed -->
+        <button onclick="showMore('about')">Show More</button>
+        <a href="#events"><button>Explore Events</button></a>
     </section>
 
     <section id="events">
         <h2>Upcoming Events</h2>
         <p>Stay tuned for exciting gymnastics events happening around the globe.</p>
-        <!-- Add more content as needed -->
+        <a href="#about"><button>Back to About</button></a>
+        <button onclick="registerForEvent('Event XYZ')">Register for Event XYZ</button>
     </section>
 
     <section id="athletes">
         <h2>Featured Athletes</h2>
         <p>Meet the incredible athletes who defy gravity and showcase their extraordinary talents.</p>
-        <!-- Add more content as needed -->
+        <button onclick="viewAthleteProfile('Athlete ABC')">View Athlete ABC</button>
+        <a href="#gallery"><button>See More in the Gallery</button></a>
     </section>
 
     <section id="gallery">
         <h2>Photo Gallery</h2>
         <p>Explore breathtaking moments captured in the world of gymnastics.</p>
-        <!-- Add more content as needed -->
+        <button onclick="openLightbox('Image123.jpg')">View Image</button>
+        <a href="#athletes"><button>Back to Athletes</button></a>
     </section>
 
     <section id="training">
         <h2>Training Programs</h2>
         <p>Discover effective training programs to enhance your gymnastic skills.</p>
-        <!-- Add more content as needed -->
+        <button onclick="downloadTrainingProgram('Program XYZ')">Download Program XYZ</button>
+        <a href="#resources"><button>Explore Resources</button></a>
     </section>
 
     <section id="resources">
         <h2>Resources</h2>
         <p>Access valuable resources, tutorials, and guides for gymnasts of all levels.</p>
-        <!-- Add more content as needed -->
+        <button onclick="viewTutorial('Flexibility Exercises')">View Flexibility Exercises</button>
+        <a href="#contact"><button>Contact Us</button></a>
     </section>
 
     <section id="contact">
         <h2>Contact Us</h2>
         <p>Have questions or want to get involved? Reach out to us!</p>
-        <!-- Add a contact form or additional information as needed -->
+        <a href="mailto:info@gymnasticsworld.com"><button>Email Us</button></a>
+        <button onclick="showContactForm()">Show Contact Form</button>
     </section>
 
     <footer>
         <p>&copy; 2023 Gymnastics World. All rights reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin: 0 10px;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    margin: 20px 0;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+function showMore(sectionId) {
+    alert(`Showing more content for ${sectionId}`);
+}
+
+function registerForEvent(eventName) {
+    alert(`Registering for ${eventName}`);
+}
+
+function viewAthleteProfile(athleteName) {
+    alert(`Viewing profile for ${athleteName}`);
+}
+
+function openLightbox(imageName) {
+    alert(`Opening lightbox for ${imageName}`);
+}
+
+function downloadTrainingProgram(programName) {
+    alert(`Downloading training program: ${programName}`);
+}
+
+function viewTutorial(tutorialName) {
+    alert(`Viewing tutorial: ${tutorialName}`);
+}
+
+function showContactForm() {
+    alert('Showing contact form');
